@@ -1,6 +1,6 @@
 package com.jxfs_lookup.querycode;
 
-import com.jxfs_lookup.main.JxfsLookup;
+import com.jxfslookup.JxfsLookup;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
