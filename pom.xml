@@ -2,12 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.jxfs-lookup</groupId>
-	<artifactId>querycode</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<groupId>com</groupId>
+	<artifactId>jxfslookup</artifactId>
+	<description>J/XFS Constant Field Values Lookup for Java </description>
 
-	<name>querycode</name>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<name>jxfs-lookup</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -27,4 +28,29 @@
 			<version>20180130</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<archive>
+								<manifest>
+									<mainClass>${fully.qualified.main.class}</mainClass>
+								</manifest>
+							</archive>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
