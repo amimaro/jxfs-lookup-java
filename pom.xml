@@ -46,6 +46,9 @@
 									<mainClass>${fully.qualified.main.class}</mainClass>
 								</manifest>
 							</archive>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
 						</configuration>
 					</execution>
 				</executions>
